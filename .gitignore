@@ -1,0 +1,17 @@
+# files
+.DS_Store
+Thumbs.db
+*.sql
+.gitignore
+/.idea/
+/bitrix/*
+
+!/bitrix/php_interface/
+!/bitrix/templates/
+!/bitrix/admin/*
+/upload/*
+
+*.xml
+*.csv
+/yandex_*.txt
+/google*.html
