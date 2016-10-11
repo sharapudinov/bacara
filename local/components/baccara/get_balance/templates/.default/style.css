@@ -1,0 +1,18 @@
+.current_balance span {
+    color:green;
+    font-size:11px;
+}
+
+.date_balance span {
+    font-style:italic;
+    color:#777;
+    font-size:11px;
+}
+
+.date_balance , .current_balance {
+    color: #333 !important;
+}
+
+.balance_block p {
+    text-align: left;
+}

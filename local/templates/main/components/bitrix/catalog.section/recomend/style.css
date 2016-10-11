@@ -1,0 +1,10 @@
+.cart-button-recommended {
+    float: right !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    width: 188px !important;
+}
+
+.cart-goods_count {
+    margin: 1px 0 0 !important;
+}

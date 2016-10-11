@@ -1,0 +1,193 @@
+.ui-effects-transfer { border: 2px dotted #c51d37; }
+
+.sale_old_price {
+    color: red !important;
+    text-decoration: line-through;
+    font-weight:bold;
+}
+
+.hide_price {
+    margin-top:8px;
+}
+
+.filter_form-submit {
+    text-decoration: none;
+    border: 3px solid #68A1D6;
+    background-color: #68A1D6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 4px;
+    font-size: 15px;
+}
+
+.form_filter-reset {
+text-decoration: none;
+    border: 3px solid #68A1D6;
+    background-color: #68A1D6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    padding: 6px;
+    font-size: 10px;
+}
+
+#slider_filter {
+    margin-bottom: 10px;
+}
+
+.filter_form-submit:hover, .form_filter-reset:hover  {
+    cursor: pointer;
+}
+
+.form_filter-reset:hover {
+    text-decoration: none;
+    color:#fff;
+}
+
+/* .catalog_item-count {
+    bottom: 135px;
+    left: 60px;
+    position: absolute;
+    color:#3a9fa2;
+    font-style:oblique;
+    font-size:17px;
+} */
+/* .catalog_item-count {
+    background-color: #c51d37;
+    bottom: 125px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    left: -20px;
+    position: absolute;
+    text-align: center;
+    width: 215px;
+}
+
+.lenta-act:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+	top: 100%;
+	border-width: 5px 10px;
+	border-style: solid;
+	border-color: #666 #666 transparent transparent;
+}
+
+.lenta-act:before {
+	border-color: #c51d37 #c51d37 #c51d37 transparent;
+    border-style: solid;
+    border-width: 10px;
+    content: " ";
+    height: 0;
+    left: -17px;
+    position: absolute;
+    top: 10px;
+    width: 17px;
+} */
+
+.catalog_item-count {
+    background-color: #c51d37;
+    bottom: 125px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    left: -10px;
+    position: absolute;
+    text-align: center;
+    width: 229px;
+}
+
+.lenta-act:after {
+    border-color: #666 #666 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px;
+    content: " ";
+    height: 0;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+
+/* .lenta-act:before {
+	border-color: #666 transparent transparent #666;
+    border-style: solid;
+    border-width: 5px 4px;
+    content: " ";
+    height: 0;
+    right: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+} */
+
+.cart-button {
+    float: right !important;
+    margin-top: 10px !important;
+    width: 88px !important;
+}
+
+.cart-goods_count {
+    margin: 1px 0 0 !important;
+}
+
+.other_prices {
+    color: #637b93;
+    float: left;
+    font-size: 11px;
+    margin-left: -12px;
+    margin-top: 9px;
+    width: 105px;
+    text-align: left;
+}
+
+.other_prices  a {
+    text-decoration: underline;
+}
+
+.other_prices span {
+    font-weight:bold;
+}
+
+.opt_prices_tip {
+    text-decoration: none !important;
+    margin-top:13px;
+}
+
+.catalog_item_price_block {
+    padding: 10px 12px 5px
+}
+
+.margin-top {
+    margin-top:15px;
+}
+
+.filter_form{
+    width:450px;
+}
+
+.filter_high-button {
+    margin-bottom:10px;
+    width:150px;
+    cursor:pointer;
+    text-align:center;
+}
+
+div.filter_high-button {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: #68a1d6; /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+} 
+div.filter_high-button:hover { background: #68a1d6; cursor:pointer;} /* при наведении курсора мышки */
+div.filter_high-button:active { background: #68a1d6; } /* при нажатии */

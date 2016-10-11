@@ -1,0 +1,44 @@
+.show_large_whosale-wrap {
+    position:relative;
+    display:block;
+}
+
+.show_large_whosale-text {
+    display: none;
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #637b93;
+    color: #3a3a3a;
+    font-size: 13px;
+    min-width: 230px;
+    padding: 10px;
+    position: absolute;
+    right: -38px;
+    top: 37px;
+    z-index: 2147483647;   
+}
+
+.triangle {
+    border-bottom: 15px solid #637b93;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    height: 0;
+    position: absolute;
+    right: 110px;
+    top: -16px;
+    width: 0;
+}
+
+.cart-button-detail {
+    float: right !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    width: 188px !important;
+}
+
+.cart-goods_count {
+    margin: 1px 0 0 !important;
+}
+
+.opt_price {
+    padding-top:8px;
+}

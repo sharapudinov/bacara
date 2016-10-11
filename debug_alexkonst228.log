@@ -1,0 +1,196 @@
+
+Array
+(
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [CANCELED] => N
+    [STATUS_ID] => N
+    [PRICE] => 720.6
+    [CURRENCY] => RUB
+    [USER_ID] => 65
+    [PAY_SYSTEM_ID] => 1
+    [PRICE_DELIVERY] => 0
+    [DELIVERY_ID] => 2
+    [DISCOUNT_VALUE] => 0
+    [TAX_VALUE] => 0
+    [USER_DESCRIPTION] => test2
+    [AFFILIATE_ID] => 
+    [SUM_PAID] => 0
+    [UPDATED_1C] => N
+    [~VERSION] => VERSION+0+1
+    [VERSION] => 1
+)
+
+Array
+(
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [CANCELED] => N
+    [STATUS_ID] => N
+    [PRICE] => 3317
+    [CURRENCY] => RUB
+    [USER_ID] => 989
+    [PAY_SYSTEM_ID] => 1
+    [PRICE_DELIVERY] => 0
+    [DELIVERY_ID] => 2
+    [DISCOUNT_VALUE] => 0
+    [TAX_VALUE] => 0
+    [USER_DESCRIPTION] => 
+    [ADDITIONAL_INFO] => dpyr
+    [AFFILIATE_ID] => 
+    [SUM_PAID] => 0
+    [UPDATED_1C] => N
+    [~VERSION] => VERSION+0+1
+    [VERSION] => 1
+)
+
+Array
+(
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [CANCELED] => N
+    [STATUS_ID] => N
+    [PRICE] => 3317
+    [CURRENCY] => RUB
+    [USER_ID] => 989
+    [PAY_SYSTEM_ID] => 8
+    [PRICE_DELIVERY] => 0
+    [DELIVERY_ID] => 2
+    [DISCOUNT_VALUE] => 0
+    [TAX_VALUE] => 0
+    [USER_DESCRIPTION] => 
+    [ADDITIONAL_INFO] => dpyr
+    [AFFILIATE_ID] => 
+    [SUM_PAID] => 0
+    [UPDATED_1C] => N
+    [~VERSION] => VERSION+0+1
+    [VERSION] => 1
+)
+
+Array
+(
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [CANCELED] => N
+    [STATUS_ID] => N
+    [PRICE] => 3317
+    [CURRENCY] => RUB
+    [USER_ID] => 989
+    [PAY_SYSTEM_ID] => 7
+    [PRICE_DELIVERY] => 0
+    [DELIVERY_ID] => 2
+    [DISCOUNT_VALUE] => 0
+    [TAX_VALUE] => 0
+    [USER_DESCRIPTION] => 
+    [ADDITIONAL_INFO] => dpyr
+    [AFFILIATE_ID] => 
+    [SUM_PAID] => 0
+    [UPDATED_1C] => N
+    [~VERSION] => VERSION+0+1
+    [VERSION] => 1
+)
+
+Array
+(
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [CANCELED] => N
+    [STATUS_ID] => N
+    [PRICE] => 16302.36
+    [CURRENCY] => RUB
+    [USER_ID] => 1115
+    [PAY_SYSTEM_ID] => 1
+    [PRICE_DELIVERY] => 0
+    [DELIVERY_ID] => 4
+    [DISCOUNT_VALUE] => 0
+    [TAX_VALUE] => 0
+    [USER_DESCRIPTION] => 
+    [AFFILIATE_ID] => 
+    [SUM_PAID] => 0
+    [UPDATED_1C] => N
+    [~VERSION] => VERSION+0+1
+    [VERSION] => 1
+)
+
+Array
+(
+    [ID] => 5554
+    [LID] => s1
+    [PERSON_TYPE_ID] => 1
+    [PAYED] => N
+    [DATE_PAYED] => 
+    [EMP_PAYED_ID] => 
+    [CANCELED] => N
+    [DATE_CANCELED] => 
+    [EMP_CANCELED_ID] => 
+    [REASON_CANCELED] => 
+    [STATUS_ID] => N
+    [DATE_STATUS] => 2016-10-10 13:22:46
+    [EMP_STATUS_ID] => 
+    [PRICE_DELIVERY] => 0.00
+    [ALLOW_DELIVERY] => N
+    [DATE_ALLOW_DELIVERY] => 
+    [EMP_ALLOW_DELIVERY_ID] => 
+    [DEDUCTED] => N
+    [DATE_DEDUCTED] => 
+    [EMP_DEDUCTED_ID] => 
+    [REASON_UNDO_DEDUCTED] => 
+    [MARKED] => N
+    [DATE_MARKED] => 
+    [EMP_MARKED_ID] => 
+    [REASON_MARKED] => 
+    [RESERVED] => Y
+    [PRICE] => 50.00
+    [CURRENCY] => RUB
+    [DISCOUNT_VALUE] => 0.00
+    [USER_ID] => 65
+    [PAY_SYSTEM_ID] => 9
+    [DELIVERY_ID] => 2
+    [DATE_INSERT] => 2016-10-10 13:22:46
+    [DATE_UPDATE] => 2016-10-10 13:22:46
+    [USER_DESCRIPTION] => test
+    [ADDITIONAL_INFO] => dpn
+    [PS_STATUS] => 
+    [PS_STATUS_CODE] => 
+    [PS_STATUS_DESCRIPTION] => 
+    [PS_STATUS_MESSAGE] => 
+    [PS_SUM] => 
+    [PS_CURRENCY] => 
+    [PS_RESPONSE_DATE] => 
+    [COMMENTS] => 
+    [TAX_VALUE] => 0.00
+    [STAT_GID] => 
+    [SUM_PAID] => 0.00
+    [RECURRING_ID] => 
+    [PAY_VOUCHER_NUM] => 
+    [PAY_VOUCHER_DATE] => 
+    [LOCKED_BY] => 
+    [DATE_LOCK] => 
+    [RECOUNT_FLAG] => Y
+    [AFFILIATE_ID] => 
+    [DELIVERY_DOC_NUM] => 
+    [DELIVERY_DOC_DATE] => 
+    [UPDATED_1C] => N
+    [STORE_ID] => 
+    [ORDER_TOPIC] => 
+    [RESPONSIBLE_ID] => 
+    [DATE_PAY_BEFORE] => 
+    [DATE_BILL] => 
+    [ACCOUNT_NUMBER] => 5554
+    [TRACKING_NUMBER] => 
+    [XML_ID] => 
+    [ID_1C] => 
+    [VERSION_1C] => 
+    [VERSION] => 4
+    [EXTERNAL_ORDER] => N
+    [BX_USER_ID] => 
+    [DATE_STATUS_FORMAT] => 10.10.2016 13:22:46
+    [DATE_INSERT_FORMAT] => 10.10.2016
+    [DATE_UPDATE_FORMAT] => 10.10.2016 13:22:46
+    [DATE_LOCK_FORMAT] => 
+)

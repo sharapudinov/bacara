@@ -1,0 +1,58 @@
+
+Array
+(
+    [orderNumber] => 5561
+    [orderSumAmount] => 5.00
+    [cms_name] => 1C-Bitrix
+    [paymentPayerCode] => 4100323962453
+    [cps_rebillingAllowed] => false
+    [paymentType] => PC
+    [requestDatetime] => 2016-10-10T14:18:57.070+03:00
+    [cps_user_country_code] => RU
+    [orderCreatedDatetime] => 2016-10-10T14:17:49.654+03:00
+    [action] => checkOrder
+    [shopId] => 77733
+    [scid] => 542739
+    [shopSumBankPaycash] => 1003
+    [BuyButton] => Оплатить
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 5561_101016141748_00000_77733
+    [unilabel] => 1f8d8c9b-0009-5000-8000-000015db3191
+    [customerNumber] => 5561
+    [invoiceId] => 2000000928146
+    [shopSumAmount] => 4.82
+    [md5] => 78C91239A02D929B3C85D13BE2947C88
+)
+
+Array
+(
+    [orderNumber] => 5563
+    [orderSumAmount] => 5.00
+    [cms_name] => 1C-Bitrix
+    [paymentPayerCode] => 4100323962453
+    [cps_rebillingAllowed] => false
+    [paymentType] => PC
+    [requestDatetime] => 2016-10-10T14:29:34.169+03:00
+    [cps_user_country_code] => RU
+    [orderCreatedDatetime] => 2016-10-10T14:29:16.555+03:00
+    [action] => checkOrder
+    [shopId] => 77733
+    [scid] => 542739
+    [shopSumBankPaycash] => 1003
+    [BuyButton] => Оплатить
+    [shopSumCurrencyPaycash] => 10643
+    [rebillingOn] => false
+    [orderSumBankPaycash] => 1003
+    [cps_region_id] => 213
+    [orderSumCurrencyPaycash] => 10643
+    [merchant_order_id] => 5563_101016142914_00000_77733
+    [unilabel] => 1f8d8f4a-0009-5000-8000-000015db6456
+    [customerNumber] => 5563
+    [invoiceId] => 2000000928186
+    [shopSumAmount] => 4.82
+    [md5] => 5528B4A00C0A2BEE7E7E900E607FB452
+)

@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Предоплата";
+$arDirProperties = Array(
+
+);
+?>

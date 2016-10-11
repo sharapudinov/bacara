@@ -1,0 +1,21 @@
+.tablebodytext > input {
+    background-color: #58b3b6;
+    border: 3px solid #3a9fa2;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 15px 0;
+    width: 550px;
+}
+
+.tablebodytext > input:hover {
+    background-color: #3a9fa2;
+}
+
+/* .bold-red {
+    font-weight:bold;
+    color:red;
+} */

@@ -1,0 +1,40 @@
+.tablebodytext > input {
+    background-color: #58b3b6;
+    border: 3px solid #3a9fa2;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 15px 0;
+    width: 550px;
+}
+
+.tablebodytext > input:hover {
+    background-color: #3a9fa2;
+}
+
+.pay_image {
+    background-image: url('images/nalichnye.png');
+    background-repeat: no-repeat;
+    background-position: 45px 90px;
+}
+
+.pay_card {
+    background-image: url('images/master-visa.png');
+    background-repeat: no-repeat;
+    background-position: 40px 90px;
+}
+
+.pay_yandex {
+    background-image: url('images/yandex-money.png');
+    background-repeat: no-repeat;
+    background-position: 46px 131px;
+}
+
+.pay_sbrf {
+    background-image: url('images/sbrf.png');
+    background-repeat: no-repeat;
+    background-position: 57px 108px;
+}

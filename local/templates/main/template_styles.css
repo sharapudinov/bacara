@@ -1,0 +1,295 @@
+.price_category-request_popup {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 7px;
+    box-shadow: 0 0 10px #222;
+    display: none;
+    height: 160px;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -80px;
+    padding: 5px;
+    position: fixed;
+    top: 50%;
+    width: 400px;
+    z-index: 2147483647;
+}
+
+#foto24 {
+    background-image: url("images/24_1m.jpg");
+    z-index:999999999999999999999999;
+    width:395px; 
+    height:159px; 
+    position:absolute;
+    right:0; 
+    top:122px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.oferta-wrap {
+    padding: 0 50px;
+}
+
+.oferta-popup {
+    position: absolute !important;
+    visibility: unset !important;
+    display:none;
+}
+
+.overlay:target + .oferta-popup {
+    display: block;
+}
+
+.oferta-cb-wrap {
+    color: #444;
+    font-weight: bold;
+    padding: 5px;
+    font-size:15px;
+}
+
+.submit-ofert {
+    display: none;
+}
+
+.oferta-error {
+    border-bottom: 1px solid red;
+}
+
+.oferta-txt-error {
+    color: red;
+    text-align: center;
+}
+
+.price_category-popup-title, .price_category-popup-text {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    z-index: 9999999;
+}
+.price_category-popup-title {
+    font-weight: bold;
+    text-align: center;
+    font-size:17px;
+}
+
+.price_category-popup-img {
+    float: left;
+    margin-right: 25px;
+    z-index: 9999999;
+}
+
+.price_category-popup-title, .price_category-popup-text {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    z-index: 9999999;
+}
+.price_category-popup-text {
+    margin-top: 45px;
+    overflow: hidden;
+}
+
+.price_category-popup-text2 {
+    margin-top: 15px;
+}
+
+.price_category-popup-text2 a{
+    font-size: 20px;
+    margin-left: 49px;
+    text-decoration: underline;
+}
+
+.price_category-popup-text2 a:hover {
+    color: #fff;
+}
+
+#total_specials_summ tr td {
+    text-align:center;
+}
+
+#total_specials_summ {
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom:25px;
+}
+
+#total_specials_summ tr td:first-child {
+    padding-right:25px;
+}
+
+#total_specials_summ tr td:nth-child(2) {
+    font-weight:bold;
+    color: green;
+}
+
+.balance_block{
+  margin-bottom:25px;
+  text-align: center;
+}
+
+.balance_value{
+    font-size: 11px;
+    text-align: left;
+}
+
+.navi {
+    position: relative;
+}
+
+#search {
+    float: unset;
+    right:0;
+    position: absolute;
+    width:225px;
+}
+
+.search-top form {
+    position:relative;
+    
+}
+
+#search input[type="text"] {
+    width:175px;
+}
+
+.search-top input[type="submit"], #search input[type="submit"] {
+    float:unset;
+    right:0;
+    position:absolute;
+    overflow: unset;
+    display:inline-block;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.new_year {
+    background: #f2f2f2 none repeat scroll 0 0;
+    color: darkgreen;
+    display: inline-block;
+    font-size: 13px;
+    padding: 10px 25px 10px 45px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 150px;
+    //font-weight:bold;
+}
+
+.new_year:hover, .new_year:focus, .new_year:active {
+    color:darkgreen;
+    font-weight:bold;
+    text-decoration: none;
+    background-color: #dce9d9;
+}
+
+.new_year span.ico {
+    bottom: 0;
+    display: block;
+    height: 23px;
+    left: 10px;
+    margin-top: -12px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 23px;
+}
+
+.women_day {
+    background: #f2f2f2 none repeat scroll 0 0;
+    color: #E95DC4;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 25px 10px 45px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 150px;
+    font-weight:bold;
+}
+
+.women_day:hover, .women_day:focus, .women_day:active {
+    color:#D147AB;
+    font-weight:bold;
+    text-decoration: none;
+    background-color: #dce9d9;
+}
+
+.women_day span.ico, .valentine_day span.ico{
+    bottom: 0;
+    display: block;
+    height: 23px;
+    left: 10px;
+    margin-top: -12px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    width: 23px;
+}
+
+.valentine_day {
+    background: #f2f2f2 none repeat scroll 0 0;
+    color: #D5101B;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px 25px 10px 45px;
+    position: relative;
+    text-decoration: none;
+    vertical-align: middle;
+    width: 150px;
+    font-weight:bold;
+}
+
+.valentine_day:hover, .valentine_day:focus, .valentine_day:active {
+    color:#D5101B;
+    font-weight:bold;
+    text-decoration: none;
+    background-color: #dce9d9;
+}
+
+.telefon_ref:hover {
+    text-decoration:none;
+}
+
+.our_operators-block, .our_partners_letters-block {
+    text-align: center;
+}
+
+.our_operators-block h2, .operatos-photo, .our_partners_letters-block {
+    margin-top: 35px;
+    border-bottom:none;
+}
+
+div.managers-photo {
+    width: 270px;
+}
+
+.operatos-photo, .letters-photo {
+    margin: 25px auto 0;
+    width:400px;    
+}
+
+.partners_blank {
+    margin-top:10px;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+.all_ok2 {
+    display:none;
+    background-color: #fff;
+    border: 3px solid #fff;    
+    font-size: 13px;
+    left: 0;
+    margin: auto;
+    max-width: 900px;
+    min-width: 300px;
+    padding: 15px;
+    position: fixed;
+    right: 0;
+    top: 0;    
+    width: 300px;
+    z-index: 99999999999;
+    left: 50%;
+    margin-left: -233px;
+    margin-top: -233px;
+    padding: 25px;
+    position: fixed;
+    top: 50%;
+}

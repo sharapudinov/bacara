@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Обращения";
+$arDirProperties = Array(
+
+);
+?>

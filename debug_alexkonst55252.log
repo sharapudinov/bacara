@@ -1,0 +1,21 @@
+
+Array
+(
+    [ACTION_FILE] => /bitrix/modules/sale/payment/yandex_3x
+    [PARAMS] => a:9:{s:7:"SHOP_ID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:5:"77733";}s:4:"SCID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:6:"542739";}s:8:"SHOP_KEY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:22:"Pa200yBaCaRaozzSHOPA20";}s:8:"ORDER_ID";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:2:"ID";}s:10:"ORDER_DATE";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:16:"DATE_INSERT_DATE";}s:10:"SHOULD_PAY";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:5:"PRICE";}s:17:"CHANGE_STATUS_PAY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:1:"Y";}s:13:"PAYMENT_VALUE";a:2:{s:4:"TYPE";s:6:"SELECT";s:5:"VALUE";s:2:"PC";}s:7:"IS_TEST";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:1:"Y";}}
+    [ENCODING] => 
+)
+
+Array
+(
+    [ACTION_FILE] => /bitrix/modules/sale/payment/yandex_3x
+    [PARAMS] => a:9:{s:7:"SHOP_ID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:5:"39301";}s:4:"SCID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:5:"29667";}s:8:"SHOP_KEY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:20:"Pa200yBaCaRabacarA20";}s:8:"ORDER_ID";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:2:"ID";}s:10:"ORDER_DATE";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:16:"DATE_INSERT_DATE";}s:10:"SHOULD_PAY";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:5:"PRICE";}s:17:"CHANGE_STATUS_PAY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:1:"Y";}s:13:"PAYMENT_VALUE";a:2:{s:4:"TYPE";s:6:"SELECT";s:5:"VALUE";s:2:"AC";}s:7:"IS_TEST";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:0:"";}}
+    [ENCODING] => 
+)
+
+Array
+(
+    [ACTION_FILE] => /bitrix/modules/sale/payment/yandex_3x
+    [PARAMS] => a:9:{s:7:"SHOP_ID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:5:"39301";}s:4:"SCID";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:5:"29667";}s:8:"SHOP_KEY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:20:"Pa200yBaCaRabacarA20";}s:8:"ORDER_ID";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:2:"ID";}s:10:"ORDER_DATE";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:16:"DATE_INSERT_DATE";}s:10:"SHOULD_PAY";a:2:{s:4:"TYPE";s:5:"ORDER";s:5:"VALUE";s:5:"PRICE";}s:17:"CHANGE_STATUS_PAY";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:1:"Y";}s:13:"PAYMENT_VALUE";a:2:{s:4:"TYPE";s:6:"SELECT";s:5:"VALUE";s:2:"AC";}s:7:"IS_TEST";a:2:{s:4:"TYPE";s:0:"";s:5:"VALUE";s:0:"";}}
+    [ENCODING] => 
+)

@@ -1,0 +1,14 @@
+.catalog_item_price_block {
+    padding: 2px;
+    background-color: #fff;
+}
+
+.catalog_item_price_block .cart-button {
+    margin: 0 0 15px;
+    float: unset;
+}
+
+.sale_old_price {
+    color: red !important;
+    text-decoration: line-through;
+}
