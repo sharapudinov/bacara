@@ -7,9 +7,6 @@ AddEventHandler("sale", "OnBeforeBasketAdd", Array("Cart", "OnBeforeBasketAddCus
 
 class Cart {
     function OnBeforeBasketAddCustom(&$arFields) {
-    
-        CModule::includeModule('iblock');
-        
         $arFilter = Array(
             "IBLOCK_ID" => 1,
             "ID" => $arFields['PRODUCT_ID']
@@ -64,13 +61,13 @@ class UserUpdate
             );
 /*
             CEvent::Send('DOCS_ADDED', 's1', $arMailFields); */
-        
+
             if(file_exists($_SERVER['DOCUMENT_ROOT']."/bitrix/php_interface/include/functions.php")) {
-                require_once($_SERVER['DOCUMENT_ROOT']."/bitrix/php_interface/include/functions.php");                
+                require_once($_SERVER['DOCUMENT_ROOT']."/bitrix/php_interface/include/functions.php");
                 SendAttache('DOCS_ADDED', 's1', $arMailFields, $docs);
                 $event = 'null'; $lid = 'null';
             }
-        
+
         }
     }
 }
@@ -91,15 +88,15 @@ class Integration
 function OnSalePayOrderSendOrgName($ID, $val)  {
 
     if($val == 'Y') {
-        
+
         if(CModule::IncludeModule('sale')) {
-            
+
             $arOrder = CSaleOrder::GetByID($ID);
-            
+
             $org_name = (in_array($arOrder['PAY_SYSTEM_ID'], array(6, 7, 8))) ? 'ИП Серов С.И.' : 'ООО Блэк Баккара';
-            
+
             $message = 'Заказ № '. $ID . ' на сумму ' . $arOrder['PRICE'] . ' руб. оплачен на ' . $org_name;
-            
+
             //$delivery_payment = ($arOrder['ADDITIONAL_INFO'] == 'dpy') ? 'В платеж включена оплата логистики.' : 'Платеж без доставки.';
             switch($arOrder['ADDITIONAL_INFO']) {
                 case 'dpn':
@@ -110,9 +107,9 @@ function OnSalePayOrderSendOrgName($ID, $val)  {
                     break;
                 case 'dpyr':
                     $delivery_payment = 'В сумму включена доставка по России';
-                    break;        
+                    break;
             }
-            
+
             $arMailFields = array(
                 'MESSAGE'     => $message,
                 'ORDER_ID'    => $ID,
@@ -120,11 +117,11 @@ function OnSalePayOrderSendOrgName($ID, $val)  {
                 'ORDER_PRICE' => $arOrder['PRICE'],
                 'DELIVERY' => $delivery_payment
             );
-        
+
             CEvent::Send('SEND_PAY_ORGNAME', 's1', $arMailFields);
         }
     }
-}  
+}
 
 function OnBeforeUserRegisterHandler(&$arFields) {
 	if($_POST['type'] == 'phizik') {

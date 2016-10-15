@@ -120,4 +120,14 @@ function SendAttache($event, $lid, $arFields, $filePath)
 			bxmail($to, $subj, $body, $head, COption::GetOptionString("main", "mail_additional_parameters", ""));
 	}
 }
+
+
+function test_dump($arg){
+    global $USER;
+    if ($USER->IsAdmin()){
+        echo '<pre>';
+        var_dump($arg);
+        echo '<pre>';
+    }
+}
 ?>

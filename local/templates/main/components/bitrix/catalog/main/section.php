@@ -12,7 +12,11 @@
 /** @var CBitrixComponent $component */
 use Bitrix\Main\Loader;
 use Bitrix\Main\ModuleManager;
-
+if(str_replace('katalog_tovarov/vazy','',$arResult['VARIABLES']['SECTION_CODE_PATH'])!=$arResult['VARIABLES']['SECTION_CODE_PATH']):?>
+	<strong>
+		Параметры ваз, указанные на сайте, могут значительно отличаться от фактических. Ручное литьё!
+	</strong>
+<?endif;
 $this->setFrameMode(true);
 
 if (!isset($arParams['FILTER_VIEW_MODE']) || (string)$arParams['FILTER_VIEW_MODE'] == '')

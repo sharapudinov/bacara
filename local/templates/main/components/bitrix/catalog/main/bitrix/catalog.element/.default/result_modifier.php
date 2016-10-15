@@ -579,4 +579,12 @@ if ($arResult['MODULES']['currency'])
 $id_user = $USER->GetID();
 $arGroups = $USER->GetUserGroupArray($id_user);
 $arResult['SHOW_LARGE_WHOSALE'] = (count(array_uintersect(array(8, 10), $arGroups, "strcasecmp")) > 0) ? true : false;
+
+$dbRes=CIBlockElement::GetElementGroups(
+   $arResult['ID']
+ );
+while ($sec=$dbRes->GetNext()){
+    $arSec[]=$sec;
+};
+$arResult['PARENT_SECTIONS']=$arSec;
 ?>

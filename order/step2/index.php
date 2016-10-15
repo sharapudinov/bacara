@@ -3,6 +3,7 @@ define("NOT_LEFT_BLOCK", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Оформление заказа");
 if(!$USER->IsAuthorized()) LocalRedirect('/order/');
+test_dump($USER)
 ?>
 
 
