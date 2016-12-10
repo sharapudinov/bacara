@@ -7,9 +7,9 @@ border:2px solid #3a9fa2;
 
 }
 
-/* стили для webkit */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ webkit */
 input::-webkit-input-placeholder { color:#757575; }
-/* стили для mozilla */
+/* пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ mozilla */
 input:-moz-placeholder { color:#757575; }
 
 
@@ -262,7 +262,7 @@ margin:0 auto;
 .accordion li > a.active span.arrow{
   background: url('/img/left_nav_sprite.png') -26px -161px;  
 }
-/* Подменю */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .reg{
  background-color: #fff;
 }
@@ -520,7 +520,7 @@ height:20px;
 margin: 5px 0 8px;
 }
 
-/* контент центр */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ */
 .content{
 padding:0;
 margin:0;
@@ -726,7 +726,7 @@ color:#353535
   vertical-align: middle;
   text-transform: uppercase;
 }
-/* для раздела каталога с товарами */
+/* пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
 .catalog-product{
 display: inline-block;
@@ -1197,7 +1197,7 @@ text-align:center;
 width:20px;
 }
 .prodoljit-pokupki{
-border-bottom: 1px solid #d6d6d6; /* Параметры линии под текстом */
+border-bottom: 1px solid #d6d6d6; /* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 width:200px;
 margin:10px 0 50px 0;
 }
@@ -1373,7 +1373,7 @@ padding:20px;
 font-size:12px;
 color:#3a3a3a;
 }
-/* Форимируем слой затемнения фона */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 .overlay {
     background-color: rgba(0, 0, 0, 0.7);
     bottom: 0;
@@ -1395,7 +1395,7 @@ color:#3a3a3a;
     visibility: visible;
     opacity: 1;
 }
-/* Позиционирум медиа-элементы внутри окна */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 .is-image {
   width: 100%;
   display: inline-block;
@@ -1414,7 +1414,7 @@ embed, iframe {
   margin: auto;
   top: 0; left: 0; bottom: 0; right: 0;
 }
-/* Формируем и позиционируем всплывающее окно */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */
 .popup { 
     min-width: 300px;
     max-width: 900px;
@@ -1434,14 +1434,14 @@ text-decoration:none;
     visibility: hidden;
     z-index: 10;
 
-/* Устанавливаем эффект перехода появления окна */ 
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */ 
     -webkit-transition: opacity .5s, top .5s;
     -moz-transition: opacity .5s, top .5s;
     -ms-transition: opacity .5s, top .5s;
     -o-transition: opacity .5s, top .5s;
     transition: opacity .5s, top .5s;
 }
-/* Устанавливаем позицию появления окна */ 
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */ 
 .popup-2{
 font-size:12px;
 overflow: auto;
@@ -1453,7 +1453,7 @@ text-decoration:none;
     opacity: 1;
     visibility: visible;
 }
-/* Оформляем и позицонируем кнопку закрытия */
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 .close-1 {
     height: 24px;
     line-height: 24px;
@@ -1481,6 +1481,7 @@ text-decoration:none;
 .popup p, .popup div {
     margin-bottom: 10px;
 }
+
 .price-down{
 margin:10px 0 0 0;
 text-align:right; 
@@ -1542,14 +1543,14 @@ margin:-50px 0 0 283px;
     visibility: hidden;
     z-index: 10;
 
-/* Устанавливаем эффект перехода появления окна */ 
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */ 
     -webkit-transition: opacity .5s, top .5s;
     -moz-transition: opacity .5s, top .5s;
     -ms-transition: opacity .5s, top .5s;
     -o-transition: opacity .5s, top .5s;
     transition: opacity .5s, top .5s;
 }
-/* Устанавливаем позицию появления окна */ 
+/* пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ */ 
 
 .overlay:target+.popup-3 {
     top: 20%;
@@ -1579,7 +1580,7 @@ text-decoration:none;
 #slider h3{
 font-size:18px !important;
 }
-/* для подвала */
+/* пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ */
 
 #footer{
 margin-top:30px;

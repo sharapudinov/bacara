@@ -50,10 +50,17 @@ $APPLICATION->SetTitle("Корзина товаров");
 	<div class="span12">
 		<div class="content">
 			 <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket",
-	"cart",
-	Array(
-		"COLUMNS_LIST" => array(0=>"NAME",1=>"DELETE",2=>"PRICE",3=>"QUANTITY",4=>"SUM",),
+	"bitrix:sale.basket.basket", 
+	"cart", 
+	array(
+		"COLUMNS_LIST" => array(
+			0 => "NAME",
+			1 => "WEIGHT",
+			2 => "DELETE",
+			3 => "PRICE",
+			4 => "QUANTITY",
+			5 => "SUM",
+		),
 		"PATH_TO_ORDER" => "/order/",
 		"HIDE_COUPON" => "Y",
 		"PRICE_VAT_SHOW_VALUE" => "N",
@@ -62,8 +69,11 @@ $APPLICATION->SetTitle("Корзина товаров");
 		"QUANTITY_FLOAT" => "N",
 		"SET_TITLE" => "Y",
 		"ACTION_VARIABLE" => "action",
-		"OFFERS_PROPS" => array()
-	)
+		"OFFERS_PROPS" => array(
+		),
+		"COMPONENT_TEMPLATE" => "cart"
+	),
+	false
 );?>
 			<div class="catalog">
 				<h2>Популярные позиции на этой неделе</h2>

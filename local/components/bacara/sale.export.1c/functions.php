@@ -1,13 +1,15 @@
 <?
+require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/sale/mysql/export.php");
+
 class CSaleExport2XML
 {
-	/* function GetBasketItemFields($arBasketItem) 	  
-	{ 		 
-		 return "<привет>C_arter_test_item_info</привет>\n";	 
-	} 	 	  
+	/* function GetBasketItemFields($arBasketItem)
+	{
+		 return "<привет>C_arter_test_item_info</привет>\n";
+	}
 */
-	function GetFullDeliveryAddress($arOrderId) 	 
-	{ 		 
+	function GetFullDeliveryAddress($arOrderId)
+	{
 		$dbOrderPropVals = CSaleOrderPropsValue::GetList(
             array(),
             array("ORDER_ID" => $arOrderId, "ORDER_PROPS_ID" => array(2,3)),
@@ -15,9 +17,9 @@ class CSaleExport2XML
             false,
             array("ID", "CODE", "VALUE", "ORDER_PROPS_ID", "PROP_TYPE")
         );
-               
+
         while ($arOrderPropVals = $dbOrderPropVals->Fetch())
-        {           
+        {
             if ($arOrderPropVals["PROP_TYPE"] == "LOCATION")
             {
                 $arAddress = CSaleLocation::GetByID($arOrderPropVals["VALUE"], LANGUAGE_ID);
@@ -29,7 +31,7 @@ class CSaleExport2XML
                 $address .= $arOrderPropVals['VALUE'];
             }
         }
-        
+
         return str_replace(array('&', '<', '>', '\'', '"'), array('&amp;', '&lt;', '&gt;', '&apos;', '&quot;'), $address);
 	}
 
@@ -68,8 +70,8 @@ class CSaleExport2XML
         $arUser = $rsUser->GetNext(true, false);
 
         return $arUser['UF_1C_ID'];
-	}    
-	
+	}
+
 	function ExportOrders2Xml($arFilter = Array(), $nTopCount = 0, $currency = "", $crmMode = false, $time_limit = 0, $version = false, $arOptions = Array())
 	{
 		global $DB;
@@ -186,7 +188,7 @@ class CSaleExport2XML
 			$arOrder = array("DATE_UPDATE" => "ASC");
 
 		$arSelect = array(
-			"ID", "LID", "PERSON_TYPE_ID", "PAYED", "DATE_PAYED", "EMP_PAYED_ID", "CANCELED", "DATE_CANCELED",
+                "ID", "LID", "PERSON_TYPE_ID", "PAYED", "DATE_PAYED", "EMP_PAYED_ID", "CANCELED", "DATE_CANCELED",
 			"EMP_CANCELED_ID", "REASON_CANCELED", "STATUS_ID", "DATE_STATUS", "PAY_VOUCHER_NUM", "PAY_VOUCHER_DATE", "EMP_STATUS_ID",
 			"PRICE_DELIVERY", "ALLOW_DELIVERY", "DATE_ALLOW_DELIVERY", "EMP_ALLOW_DELIVERY_ID", "PRICE", "CURRENCY", "DISCOUNT_VALUE",
 			"SUM_PAID", "USER_ID", "PAY_SYSTEM_ID", "DELIVERY_ID", "DATE_INSERT", "DATE_INSERT_FORMAT", "DATE_UPDATE", "USER_DESCRIPTION",
@@ -209,7 +211,7 @@ class CSaleExport2XML
 		while($arOrder = $dbOrderList->Fetch())
 		{
 			if ($crmMode)
-			{			
+			{
 				if($bNewVersion && is_array($_SESSION["BX_CML2_EXPORT"][$lastOrderPrefix]) && in_array($arOrder["ID"], $_SESSION["BX_CML2_EXPORT"][$lastOrderPrefix]) && empty($arFilter["ID"]))
 					continue;
 				ob_start();
@@ -511,7 +513,7 @@ class CSaleExport2XML
 					</<?=GetMessage("SALE_EXPORT_STORIES")?>>
 					<?
 					/*
-					$storeBasket = "				
+					$storeBasket = "
 						<".GetMessage("SALE_EXPORT_STORIES").">
 							<".GetMessage("SALE_EXPORT_STORY").">
 								<".GetMessage("SALE_EXPORT_ID").">".$arStore[$arOrder["STORE_ID"]]["XML_ID"]."</".GetMessage("SALE_EXPORT_ID").">
@@ -541,7 +543,7 @@ class CSaleExport2XML
 					if(strlen($priceType) <= 0)
 						$priceType = $arBasket["NOTES"];
 					?>
-					<<?=GetMessage("SALE_EXPORT_ITEM")?>>                        
+					<<?=GetMessage("SALE_EXPORT_ITEM")?>>
 						<<?=GetMessage("SALE_EXPORT_ID")?>><?=(htmlspecialcharsbx($arBasket["PRODUCT_XML_ID"])) ? htmlspecialcharsbx($arBasket["PRODUCT_XML_ID"]) : 'PrePayment';?></<?=GetMessage("SALE_EXPORT_ID")?>>
 						<<?=GetMessage("SALE_EXPORT_CATALOG_ID")?>><?=htmlspecialcharsbx($arBasket["CATALOG_XML_ID"])?></<?=GetMessage("SALE_EXPORT_CATALOG_ID")?>>
 						<<?=GetMessage("SALE_EXPORT_ITEM_NAME")?>><?=htmlspecialcharsbx($arBasket["NAME"])?></<?=GetMessage("SALE_EXPORT_ITEM_NAME")?>>
@@ -862,7 +864,7 @@ class CSaleExport2XML
 		<?
 		return $arResultStat;
 	}
-    
+
     function ExportContragents($arOrder = array(), $arProp = array(), $agent = array(), &$arResultStat, $bNewVersion = false, $arOptions = array())
 	{
 		$bExportFromCrm = (isset($arOptions["EXPORT_FROM_CRM"]) && $arOptions["EXPORT_FROM_CRM"] === "Y");
@@ -874,18 +876,18 @@ class CSaleExport2XML
 		else: ?>
 				<<?=GetMessage("SALE_EXPORT_ID")?>><?=CSaleExport2XML::GetNewID($arOrder["USER_ID"])?></<?=GetMessage("SALE_EXPORT_ID")?>><?
 		endif; ?>
-        
+
                 <?
                     $userId = $arOrder["USER_ID"] ? $arOrder["USER_ID"] : $arProp["CRM"]["CLIENT_ID"];
                     $userInfo = CSaleExport2XML::GetInfoAboutUser($userId);
                 ?>
-        
+
 				<<?='ФиоЗаказчика'?>><?=$userInfo['LAST_NAME'].' '.$userInfo['NAME'].' '.$userInfo['SECOND_NAME']?></<?='ФиоЗаказчика'?>>
 				<<?='ЭлектроннаяПочта'?>><?=$userInfo['EMAIL']?></<?='ЭлектроннаяПочта'?>>
 				<<?='Телефон'?>><?=$userInfo['PERSONAL_PHONE']?></<?='Телефон'?>>
-                
-				<?				
-				
+
+				<?
+
 					$arResultStat["CONTACTS"]++;
 					?>
 					<<?='НазваниеКомпанииПолное'?>><?=$userInfo['UF_COMPANY_FULL']?></<?='НазваниеКомпанииПолное'?>>
@@ -900,17 +902,17 @@ class CSaleExport2XML
 					<<?='НомерПаспорта'?>><?=$userInfo['UF_PASSPORT_NUMBER']?></<?='НомерПаспорта'?>>
 					<<?='КогдаВыданПаспорт'?>><?=$userInfo['UF_PASSPORT_GIVE']?></<?='КогдаВыданПаспорт'?>>
 					<<?='КемВыданПаспорт'?>><?=$userInfo['UF_PASSPORT_FROM']?></<?='КемВыданПаспорт'?>>
-					<<?='КодПодразделенияПаспорта'?>><?=$userInfo['UF_PASSPORT_FCODE']?></<?='КодПодразделенияПаспорта'?>>                    
+					<<?='КодПодразделенияПаспорта'?>><?=$userInfo['UF_PASSPORT_FCODE']?></<?='КодПодразделенияПаспорта'?>>
 					<<?='АдресРегистрации'?>><?=$userInfo['UF_ADDRESS_REG']?></<?='АдресРегистрации'?>>
 					<<?='АдресДоставки'?>><?=CSaleExport2XML::GetFullDeliveryAddress($arOrder['ID'])?></<?='АдресДоставки'?>>
                     <<?='Документы'?>>
                     <?foreach($userInfo['DOCS'] as $doc):?>
                     <?if(strlen($doc['FILE_NAME']) > 0):?>
                         <<?='Документ'?>><?='http://baccara-decor.ru'.'/upload/'.$doc['SUBDIR'].'/'.$doc['FILE_NAME']?></<?='Документ'?>>
-                    <?endif;?>    
+                    <?endif;?>
                     <?endforeach;?>
                     </<?='Документы'?>>
-                
+
 				<<?=GetMessage("SALE_EXPORT_ROLE")?>><?=GetMessage("SALE_EXPORT_BUYER")?></<?=GetMessage("SALE_EXPORT_ROLE")?>>
 			</<?=GetMessage("SALE_EXPORT_CONTRAGENT")?>>
 		</<?=GetMessage("SALE_EXPORT_CONTRAGENTS")?>>

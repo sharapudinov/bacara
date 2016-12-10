@@ -92,7 +92,7 @@ if ($arParams['USE_FILTER'] == 'Y')
 			"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 			"SECTION_ID" => $arCurSection['ID'],
 			"FILTER_NAME" => $arParams["FILTER_NAME"],
-			"PRICE_CODE" => false,
+			"PRICE_CODE" => [0=>'Оптовая'],
 			"CACHE_TYPE" => $arParams["CACHE_TYPE"],
 			"CACHE_TIME" => $arParams["CACHE_TIME"],
 			"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],

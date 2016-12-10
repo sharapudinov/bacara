@@ -1,6 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 <?
-
+//test_dump($arResult);
 global $USER, $arUser;
 if($USER->IsAuthorized()) { 
 	$rsUser = CUser::GetByID($USER->GetID());

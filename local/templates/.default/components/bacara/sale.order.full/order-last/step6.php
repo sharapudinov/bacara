@@ -82,7 +82,7 @@
 	<td valign="top" width="35%">
 		<?= str_replace("#LINK#", $arParams["PATH_TO_PERSONAL"], GetMessage("STOF_ORDER_VIEW")) ?><br /><br />
 		<?= str_replace("#LINK#", $arParams["PATH_TO_PERSONAL"], GetMessage("STOF_ANNUL_NOTES")) ?><br /><br />
-		<?= str_replace("#ORDER_ID#", $arResult["ORDER_ID"], GetMessage("STOF_ORDER_ID_NOTES")) ?>
+		<?= str_replace("#ORDER_ID#", $arResult["ORDER"]["ACCOUNT_NUMBER"], GetMessage("STOF_ORDER_ID_NOTES")) ?>
 	</td>
 </tr>
 </table>

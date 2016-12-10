@@ -84,23 +84,23 @@ else $new_sort = 'ASC';
         </script>
         
         
-        <form method="get">
+       <!-- <form method="get">
             <p>            
               <label for="amount">Высота в см:</label>
-                <?if(isset($_REQUEST['amount'])):?>
-                    <p><?=($min_val." - ".$max_val)?></p>
-                    <a style="margin-bottom:15px;" href="<?=$APPLICATION->GetCurPageParam("", array("PAGEN_1", "amount"))?>">Выбрать другую высоту</a>
-                <?else:?>
+                <?/*if(isset($_REQUEST['amount'])):*/?>
+                    <p><?/*=($min_val." - ".$max_val)*/?></p>
+                    <a style="margin-bottom:15px;" href="<?/*=$APPLICATION->GetCurPageParam("", array("PAGEN_1", "amount"))*/?>">Выбрать другую высоту</a>
+                <?/*else:*/?>
                     <input name="amount" type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
-                <?endif;?>
+                <?/*endif;*/?>
             </p>
             
-            <?if(!isset($_REQUEST['amount'])):?>
+            <?/*if(!isset($_REQUEST['amount'])):*/?>
                 <div style="margin:25px 0;" id="slider-range"></div>    
                 <input type="hidden" name="high_filter" value="Y">
                 <button name="form_submit">Применить</button>
-            <?endif;?>
-        </form> 
+            <?/*endif;*/?>
+        </form> -->
     <?endif;?>
     
     
@@ -190,8 +190,9 @@ else $new_sort = 'ASC';
                     </div>
                 </div>
 				<div class="cart-button">
-					<a href="#" rel="<?=$arItem['ID']?>"><span>В КОРЗИНУ</span></a>
-				</div>
+					<a href='#' rel="<?=$arItem['ID']?>" cml2article="<?=$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']?>">
+						<span>В КОРЗИНУ</span>
+					</a>				</div>
                 <div class="clr"></div>
 				<? } else { ?>
 				по запросу

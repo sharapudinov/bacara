@@ -12,9 +12,9 @@ function ChangeGenerate(val)
     $('.switch_control').on('mouseover', function() {
         $('.call-operator').toggleClass('bold-red')
     });
-    
+
     $('.switch_control').on('mouseout', function() {
         $('.call-operator').toggleClass('bold-red')
     });
-    
+
 }); */

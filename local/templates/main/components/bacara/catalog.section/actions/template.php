@@ -101,7 +101,10 @@ else $new_sort = 'ASC';
 				</div>
 				<?if(floatval($arItem['MIN_PRICE']['DISCOUNT_VALUE']) > 0) { ?>
 				<div class="cart-button">
-					<input name="число" value="1" class="quantity<?=$arItem['ID']?>"><a href="#" rel="<?=$arItem['ID']?>"><span>В КОРЗИНУ</span></a>
+					<input name="число" value="1" class="quantity<?=$arItem['ID']?>">
+					<a href='#' rel="<?=$arItem['ID']?>" cml2article="<?=$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']?>">
+						<span>В КОРЗИНУ</span>
+					</a>
 				</div>
 				<? } else { ?>
 				по запросу

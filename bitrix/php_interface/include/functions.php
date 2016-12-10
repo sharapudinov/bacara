@@ -121,13 +121,3 @@ function SendAttache($event, $lid, $arFields, $filePath)
 	}
 }
 
-
-function test_dump($arg){
-    global $USER;
-    if ($USER->IsAdmin()){
-        echo '<pre>';
-        var_dump($arg);
-        echo '<pre>';
-    }
-}
-?>

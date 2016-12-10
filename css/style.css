@@ -2485,7 +2485,7 @@ a.zoom{
 .detail_info_section{
   float: right;
   max-width:215px;
-  overflow-x:important;
+  overflow-x: scroll !important;
 }
 .catalog_item_info .catalog_item_properties{
   padding-bottom: 5px;

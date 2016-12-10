@@ -31,8 +31,7 @@ IncludeTemplateLangFile(__FILE__);
 	<script src="/js/jquery.maskedinput.min.js"></script>
     <script src="/js/jQEditRangeSlider-min.js"></script>
     <?//$APPLICATION->AddHeadScript("/local/templates/main/js/snow-fall.js");?>
-	<?/*<script src="/local/templates/main/js/script.js"></script>*/?>
-    <?$APPLICATION->AddHeadScript("/local/templates/main/js/script.js");?>
+     <?$APPLICATION->AddHeadScript("/local/templates/main/js/script.js");?>
 	<?$APPLICATION->ShowHead();?>
 	<?/*<link rel="icon" href="/favicon.ico" type="image/x-icon">*/?>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">	

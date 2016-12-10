@@ -3,12 +3,7 @@ define("NOT_LEFT_BLOCK", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Оформление заказа");
 if(!$USER->IsAuthorized()) LocalRedirect('/order/');
-test_dump($USER)
 ?>
-
-
-
-
 <?$APPLICATION->IncludeComponent(
 	"bacara:sale.order.full", 
 	"order-last", 
@@ -31,7 +26,8 @@ test_dump($USER)
 		"SHOW_AJAX_DELIVERY_LINK" => "Y",
 		"SET_TITLE" => "Y",
 		"PRICE_VAT_INCLUDE" => "Y",
-		"PRICE_VAT_SHOW_VALUE" => "Y"
+		"PRICE_VAT_SHOW_VALUE" => "Y",
+		"COMPONENT_TEMPLATE" => "order-last"
 	),
 	false
 );?>

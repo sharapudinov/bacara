@@ -45,7 +45,10 @@ $this->setFrameMode(true);
 				<div class="base_prise_value"><?=$arItem['PRICES']['Оптовая']['DISCOUNT_VALUE']?></div>
 			</div>
 			<div class='cart-button'>
-				<input name="число" value='1' class="quantity<?=$arItem['ID']?>"><a href='#' rel="<?=$arItem['ID']?>"><span>В КОРЗИНУ</span></a>
+				<input name="число" value='1' class="quantity<?=$arItem['ID']?>">
+				<a href='#' rel="<?=$arItem['ID']?>" cml2article="<?=$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']?>">
+					<span>В КОРЗИНУ</span>
+				</a>
 			</div>
 			<? } else echo '<center>нет на складе</center>';?>
 			<div class="clr"></div>

@@ -11,18 +11,8 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-
-//echo '<pre>';
-//var_dump($arResult['ITEMS'][0]); 
-//echo '</pre>';die();
+//test_dump($arResult);
 ?>
-
-
-		
-
-
-
-
 <?foreach($arResult['ITEMS'] as $arItem) { 
 
 	$file = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE']['ID'], array('width'=>180, 'height'=>180), BX_RESIZE_IMAGE_EXACT, true);
@@ -60,7 +50,7 @@ $this->setFrameMode(true);
                 <a class="plus-goods_count" href="javascript:void(0);">+</a>
             </div>
 			<div class="cart-button cart-button-recommended">
-				<a href='#' rel="<?=$arItem['ID']?>"><span>В КОРЗИНУ</span></a>
+				<a href='#' rel="<?=$arItem['ID']?>" cml2article="<?=$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']?>"><span>В КОРЗИНУ</span></a>
 			</div>
 			<? } else echo '<center>нет на складе</center>';?>
 			<div class="clr"></div>

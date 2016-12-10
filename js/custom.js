@@ -152,8 +152,8 @@ $(document).ready(function(){
             console.log("input.quantity"+$(this).attr('rel')); */
             
             var item_id = $(this).attr('rel');
-            
-            $.post('/include/add2basket.php', {'add2basket':'Y', 'id':item_id, 'quantity':q}, function(data){
+            var cml2article =$(this).attr('cml2article');
+            $.post('/include/add2basket.php', {'add2basket':'Y', 'id':item_id, 'quantity':q,'cml2article':cml2article}, function(data){
                 
                 $('#'+item_id).animate({opacity: 1}, 350);                
                 $(".top_basket").html(data);

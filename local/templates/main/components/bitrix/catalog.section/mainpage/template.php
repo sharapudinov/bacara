@@ -12,13 +12,9 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 
-//echo '<pre>';
-//var_dump($arResult['ITEMS'][0]); 
-//echo '</pre>';die();
 ?>
 
-<?foreach($arResult['ITEMS'] as $arItem) { 
-
+<?foreach($arResult['ITEMS'] as $arItem) {
 	$file = CFile::ResizeImageGet($arItem['PREVIEW_PICTURE']['ID'], array('width'=>180, 'height'=>180), BX_RESIZE_IMAGE_EXACT, true);
 	if(!$file) { 
 	 $file['src'] = '/img/logo.png';
@@ -52,7 +48,10 @@ $this->setFrameMode(true);
 			</div>
             
 			<div class='cart-button cart-goods_count'>
-				<input count_val="<?=($arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']) ? $arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']: 1?>" name="число" value='<?=($arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']) ? $arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']: 1?>' class="quantity<?=$arItem['ID']?>"><a href='#' rel="<?=$arItem['ID']?>"><span>В КОРЗИНУ</span></a>
+				<input count_val="<?=($arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']) ? $arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']: 1?>" name="число" value='<?=($arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']) ? $arItem['PROPERTIES']['KOLICHESTVO_V_UPAKOVKE']['VALUE']: 1?>' class="quantity<?=$arItem['ID']?>">
+				<a href='#' rel="<?=$arItem['ID']?>" cml2article="<?=$arItem['PROPERTIES']['CML2_ARTICLE']['VALUE']?>">
+					<span>В КОРЗИНУ</span>
+				</a>
 			</div>
 		</div>
 		<div class='lpredlojenie'><p>ЛУЧШЕЕ ПРЕДЛОЖЕНИЕ</p>
