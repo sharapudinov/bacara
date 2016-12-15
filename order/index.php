@@ -2,7 +2,7 @@
 define("NOT_LEFT_BLOCK", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Оформление заказа");
-if($USER->IsAuthorized()) LocalRedirect('/order/step2/');
+if($USER->IsAuthorized()) LocalRedirect('/order/new/');
 
 CModule::IncludeModule('sale');
 $arBasketItems = array();

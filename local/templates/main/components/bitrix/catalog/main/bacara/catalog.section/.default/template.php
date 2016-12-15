@@ -26,13 +26,13 @@ if($arParams['ELEMENT_SORT_ORDER'] == 'ASC')
 else $new_sort = 'ASC';
 ?>
 
-<div class="catalog"><?/* echo '<pre>'; print_r($arResult['ITEMS'][0]); echo '</pre>';  */?>
+<div class="catalog">
 	<div class='order'>
 		<div class="sorter filter_block">
 			<div class="sorter_name">Сортировать по:</div>
 			<div class="sorter_body">
-				<a class='sorter_type price_sort <?if($arParams["ELEMENT_SORT_FIELD"] == 'CATALOG_PRICE_1'){?>active<?}?> <?if($new_sort=='ASC'){?>asc<?}else{?>desc<?}?>' href="<?=$APPLICATION->GetCurUri();?>?sort=price&order=<?=$new_sort?>">ЦЕНЕ <span class="ico"></span></a>
-				<?/*<a href='?sort=name&order=<?=$new_sort?>' class='sorter_type name_sort <?if($arParams["ELEMENT_SORT_FIELD"] == 'NAME'){?>active<?}?> <?if($new_sort=='ASC'){?>asc<?}else{?>desc<?}?>'>НАЗВАНИЮ <span class="ico"></span></a>*/?>
+				<a class='sorter_type price_sort <?if($arParams["ELEMENT_SORT_FIELD"] == 'CATALOG_PRICE_2'){?>active<?}?> <?if($new_sort=='ASC'){?>asc<?}else{?>desc<?}?>' href="<?=$APPLICATION->GetCurPageParam('sort=price&order='.$new_sort,array('sort','order'));?>">ЦЕНЕ <span class="ico"></span></a>
+				<a href='<?=$APPLICATION->GetCurPageParam('sort=name&order='.$new_sort,array('sort','order'));?>' class='sorter_type name_sort <?if($arParams["ELEMENT_SORT_FIELD"] == 'NAME'){?>active<?}?> <?if($new_sort=='ASC'){?>asc<?}else{?>desc<?}?>'>НАЗВАНИЮ <span class="ico"></span></a>
 			</div>
 		</div>
 		<div class="scope filter_block">
@@ -102,8 +102,9 @@ else $new_sort = 'ASC';
             <?/*endif;*/?>
         </form> -->
     <?endif;?>
-    
-    
+
+	<?=$arResult["NAV_STRING"]?>
+
 	<div class="catalog_items catalog_tile">
 		<?foreach($arResult['ITEMS'] as $arItem) { 
 		/*echo '<pre>';

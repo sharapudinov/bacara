@@ -8,7 +8,7 @@ $(document).ready(function() {
         
         
     $('.predoplata').on('click', function() {
-        
+
         var item_id = $(this).closest('.catalog_detail').attr('id');
         var summ = $('.base_prise_value input').val();
         
