@@ -548,7 +548,7 @@ else
 					if ($arOrderProps["IS_LOCATION4TAX"]=="Y")
 						$arResult["TAX_LOCATION"] = IntVal($curVal);
 
-					if (IntVal($curVal)<=0) $bErrorField = True;
+/*					if (IntVal($curVal)<=0) $bErrorField = True;*/
 				}
 				elseif ($arOrderProps["IS_PROFILE_NAME"]=="Y" || $arOrderProps["IS_PAYER"]=="Y" || $arOrderProps["IS_EMAIL"]=="Y" || $arOrderProps["IS_ZIP"]=="Y")
 				{
@@ -586,8 +586,8 @@ else
 					}
 					elseif ($arOrderProps["TYPE"]=="LOCATION")
 					{
-						if (IntVal($curVal)<=0)
-							$bErrorField = True;
+						/*if (IntVal($curVal)<=0)
+							$bErrorField = True;*/
 					}
 					elseif ($arOrderProps["TYPE"]=="MULTISELECT")
 					{

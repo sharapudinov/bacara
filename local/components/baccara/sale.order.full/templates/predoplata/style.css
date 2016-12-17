@@ -38,3 +38,6 @@
     background-repeat: no-repeat;
     background-position: 57px 108px;
 }
+.input_group {
+    display: none;
+}

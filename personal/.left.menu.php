@@ -22,13 +22,22 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Обращения", 
-		"/personal/support/", 
-		Array(), 
-		Array(), 
-		"" 
+		"Обращения",
+		"/personal/support/",
+		Array(),
+		Array(),
+		""
+	),
+    Array(
+		"Подписки",
+		"/personal/subscribes/",
+		Array(),
+		Array(),
+		""
 	)
 );
+
+include($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php");
 
 $id_user = $USER->GetID();
 $arGroups = $USER->GetUserGroupArray($id_user);

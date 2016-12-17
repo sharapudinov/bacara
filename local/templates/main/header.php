@@ -30,7 +30,7 @@ IncludeTemplateLangFile(__FILE__);
 	<link rel="stylesheet" href="/css/prettyPhoto.css">	
 	<script src="/js/jquery.maskedinput.min.js"></script>
     <script src="/js/jQEditRangeSlider-min.js"></script>
-    <?//$APPLICATION->AddHeadScript("/local/templates/main/js/snow-fall.js");?>
+    <?$APPLICATION->AddHeadScript("/local/templates/main/js/snow-fall.js");?>
      <?$APPLICATION->AddHeadScript("/local/templates/main/js/script.js");?>
 	<?$APPLICATION->ShowHead();?>
 	<?/*<link rel="icon" href="/favicon.ico" type="image/x-icon">*/?>
@@ -41,8 +41,9 @@ IncludeTemplateLangFile(__FILE__);
 	<!--[if lt IE 9]>
 	<script src="/js/IE9.js"></script>
 	<![endif]-->
+
   </head>
- <body> 
+ <body>
 	<?$APPLICATION->ShowPanel()?>
     <?//if(!$USER->IsAdmin() && $APPLICATION->GetCurUri() != '/engineering works.php'):?>
         <?//LocalRedirect('/engineering works.php');?>
