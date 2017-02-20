@@ -2,9 +2,9 @@
 
 use Bitrix\Main\EventManager;
 
-$eventManager=EventManager::getInstance();
+$eventManager = EventManager::getInstance();
 
-$eventManager->addEventHandlerCompatible("sale","OnSaleOrderPaid","OnSaleOrderPaidHandler");
+$eventManager->addEventHandlerCompatible("sale", "OnSaleOrderPaid", "OnSaleOrderPaidHandler");
 /*$eventManager->addEventHandlerCompatible("sale","OnSalePayOrder","OnSalePayOrderSendOrgName");*/
 /*$eventManager->addEventHandlerCompatible("sale",'OnOrderNewSendEmail' ,  Array('Cart','addBasketInfoToEmail'));*/
 /*$eventManager->addEventHandlerCompatible("sale", "OnBeforeBasketAdd", Array("Cart", "OnBeforeBasketAddCustom"));*/
@@ -14,15 +14,16 @@ AddEventHandler("main", "OnAfterUserRegister", Array("Integration", "OnAfterUser
 AddEventHandler("main", "OnBeforeUserUpdate", Array("UserUpdate", "OnBeforeUserUpdateHandler"));
 
 
-function OnSaleOrderPaidHandler($order){
-    $ID=$order->GetField('ID');
-    $PRICE=$order->GetField('PRICE');
-    $PAY_SYSTEM_ID=$order->GetField('PAY_SYSTEM_ID');
-    $ADDITIONAL_INFO=$order->GetField('ADDITIONAL_INFO');
+function OnSaleOrderPaidHandler($order)
+{
+    $ID = $order->GetField('ID');
+    $PRICE = $order->GetField('PRICE');
+    $PAY_SYSTEM_ID = $order->GetField('PAY_SYSTEM_ID');
+    $ADDITIONAL_INFO = $order->GetField('ADDITIONAL_INFO');
 
     $org_name = in_array($PAY_SYSTEM_ID, [6, 7, 8]) ? 'ИП Серов С.И.' :
-        in_array($PAY_SYSTEM_ID, [3, 4, 5])? 'ООО Блэк Баккара':
-            in_array($PAY_SYSTEM_ID, [9, 10, 11])?'ООО Оптовый Центр Цветов':
+        in_array($PAY_SYSTEM_ID, [3, 4, 5]) ? 'ООО Блэк Баккара' :
+            in_array($PAY_SYSTEM_ID, [9, 10, 11]) ? 'ООО Оптовый Центр Цветов' :
                 'не определено';
 
     $message = 'Заказ № ' . $ID . ' на сумму ' . $PRICE . ' руб. оплачен на ' . $org_name;
@@ -49,6 +50,7 @@ function OnSaleOrderPaidHandler($order){
 
     CEvent::Send('SEND_PAY_ORGNAME', 's1', $arMailFields);
 }
+
 /*function OnSalePayOrderSendOrgName($ID, $val)
 {
 
@@ -93,7 +95,8 @@ function OnSaleOrderPaidHandler($order){
 
 class Cart
 {
-    function addBasketInfoToEmail($id, &$eventName, &$arFields){
+    function addBasketInfoToEmail($id, &$eventName, &$arFields)
+    {
         AddMessage2Log($arFields);
 
         /*if ($eventName=='SALE_NEW_ORDER' && strlen($arFields['ORDER_LIST']<=0)) {
@@ -103,36 +106,36 @@ class Cart
         }*/
     }
 
-/*    function OnBeforeBasketAddCustom(&$arFields)
-    {
-        AddMessage2Log($arFields);
-        CModule::includeModule('iblock');
+    /*    function OnBeforeBasketAddCustom(&$arFields)
+        {
+            AddMessage2Log($arFields);
+            CModule::includeModule('iblock');
 
-        $arFilter = Array(
-            "IBLOCK_ID" => 1,
-            "ID" => $arFields['PRODUCT_ID']
-        );
-
-        $arSelect = Array(
-            "ID",
-            "IBLOCK_ID",
-            "NAME",
-            "PROPERTY_CML2_ARTICLE",
-        );
-
-        $res = CIBlockElement::GetList(array(), $arFilter, false, false, $arSelect);
-        if ($ob = $res->Fetch()) {
-            $arGoods = $ob;
-        }
-
-        if ($arGoods['PROPERTY_CML2_ARTICLE_VALUE']) {
-            $arFields["PROPS"][] = array(
-                "NAME" => 'Артикул',
-                "CODE" => 'CML2_ARTICLE',
-                "VALUE" => $arGoods['PROPERTY_CML2_ARTICLE_VALUE'],
+            $arFilter = Array(
+                "IBLOCK_ID" => 1,
+                "ID" => $arFields['PRODUCT_ID']
             );
-        }
-    }*/
+
+            $arSelect = Array(
+                "ID",
+                "IBLOCK_ID",
+                "NAME",
+                "PROPERTY_CML2_ARTICLE",
+            );
+
+            $res = CIBlockElement::GetList(array(), $arFilter, false, false, $arSelect);
+            if ($ob = $res->Fetch()) {
+                $arGoods = $ob;
+            }
+
+            if ($arGoods['PROPERTY_CML2_ARTICLE_VALUE']) {
+                $arFields["PROPS"][] = array(
+                    "NAME" => 'Артикул',
+                    "CODE" => 'CML2_ARTICLE',
+                    "VALUE" => $arGoods['PROPERTY_CML2_ARTICLE_VALUE'],
+                );
+            }
+        }*/
 }
 
 class UserUpdate
@@ -189,7 +192,6 @@ class Integration
 }
 
 
-
 function OnBeforeUserRegisterHandler(&$arFields)
 {
     if ($_POST['type'] == 'phizik') {
@@ -220,16 +222,35 @@ function test_dump($arg)
     }
 }
 
-function requered_ofert_for_user($user_id){
+function requered_ofert_for_user($user_id)
+{
     return 19008;
 }
 
-AddEventHandler("main", "OnBeforeUserAdd", ["MyClass", "OnBeforeUserAddHandler"]);
+$eventManager->addEventHandler("main", "OnBeforeUserAdd", ["MyClass", "OnBeforeUserAddHandler"]);
+$eventManager->addEventHandler("sale", "OnSaleOrderSaved", ["MyClass", "OnSaleOrderSavedHandler"]);
 
 class MyClass
 {
     function OnBeforeUserAddHandler(&$arFields)
     {
-         $arFields["UF_CONFIRMED_OFERTS"][]= requered_ofert_for_user();
+        $arFields["UF_CONFIRMED_OFERTS"][] = requered_ofert_for_user();
+    }
+
+    function OnSaleOrderSavedHandler(\Bitrix\Main\Event $event)
+    {
+        require_once ('DocumentCreator.php');
+        $result = new Bitrix\Main\Entity\EventResult;
+         $order = $event->getParameter("ENTITY");
+        AddMessage2Log($order->getField('DELIVERY_ID'));
+        if($order->getField('DELIVERY_ID')==1){
+            DocumetntCreater::createProxy($order);
+        };
+        /*$pdfObject->Text(20,20,$order->getPrice());
+        $pdfObject->Output($_SERVER['DOCUMENT_ROOT'].'/proxy.pdf');*/
+        /*        $result->modifyFields(array('ISBN' => $cleanIsbn));*/
+        /*        AddMessage2Log($order);*/
+        /*        return $result;*/
     }
 }
+

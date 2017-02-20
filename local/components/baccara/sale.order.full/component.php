@@ -526,11 +526,13 @@ else
 					$arFilter,
 					false,
 					false,
-					array("ID", "NAME", "TYPE", "IS_LOCATION", "IS_LOCATION4TAX", "IS_PROFILE_NAME", "IS_PAYER", "IS_EMAIL", "IS_ZIP", "REQUIED", "SORT")
+					array("ID", "NAME", "TYPE", "IS_LOCATION", "IS_LOCATION4TAX", "IS_PROFILE_NAME", "IS_PAYER", "IS_EMAIL", "IS_ZIP", "REQUIED", "SORT","CODE")
 				);
 			while ($arOrderProps = $dbOrderProps->GetNext())
 			{
-				$bErrorField = False;
+/*                test_dump($arOrderProps);*/
+
+                $bErrorField = False;
 				$curVal = $arResult["POST"]["~ORDER_PROP_".$arOrderProps["ID"]];
 
 				if ($arOrderProps["TYPE"]=="LOCATION")
@@ -572,12 +574,12 @@ else
 					}
 					if($arOrderProps["IS_ZIP"]=="Y")
 					{
-						$arResult["DELIVERY_LOCATION_ZIP"] = $curVal;
-						if (strlen($arResult["DELIVERY_LOCATION_ZIP"])<=0)
-							$bErrorField = True;
+//						/*$arResult["DELIVERY_LOCATION_ZIP"] = $curVal;
+//						if (strlen($arResult["DELIVERY_LOCATION_ZIP"])<=0)
+//							$bErrorField = True;*/
 					}
 				}
-				elseif ($arOrderProps["REQUIED"]=="Y")
+				elseif ($arOrderProps["REQUIED"]=="Y"  && !in_array($arOrderProps['CODE'],array('zip','passport_num','tc','proxy')))
 				{
 					if ($arOrderProps["TYPE"]=="TEXT" || $arOrderProps["TYPE"]=="TEXTAREA" || $arOrderProps["TYPE"]=="RADIO" || $arOrderProps["TYPE"]=="SELECT" || $arOrderProps["TYPE"] == "CHECKBOX")
 					{

@@ -1,7 +1,7 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-	switch ($_SERVER['REQUEST_URI'])
+	switch ($APPLICATION->GetCurDir())
 	{
 		case '/catalog/katalog_tovarov/korziny_kashpo/':
 			$APPLICATION->SetPageProperty('title', 'Предлагаем купить плетеные корзины оптом в Москве');
@@ -75,7 +75,7 @@
 			<p>Флористика &ndash; искусство очень яркое, чувственное, передающее массу положительных эмоций и в процессе созерцания, и в процессе создания композиций. Работая с живыми растениями, применяя различные материалы и аксессуары, профессиональные флористы умеют дарить настроение, заставляют композицию говорить о чувствах. И, естественно, без оригинальных материалов в данном случае обойтись непросто. Наш Интернет магазин предлагает разнообразные <strong style="font-weight: normal;">флористические материалы оптом</strong> для тех, кто профессионально занимается этим прекрасным искусством и для тех, кто только пробует свои силы в этом. Мы стремимся к тому, чтобы каждому нашему заказчику было легче заниматься творчеством, чтобы они имели подспорье и могли воплощать в жизнь самые необычные идеи. Ведь только так рождается настоящее произведение искусства.</p>';
 			break;
 
-		case '/catalog/katalog_tovarov/udliniteli_dlya_tsvetov/':
+		case '/catalog/katalog_tovarov/udliniteli_dlya_tsvetov_1/':
 			$APPLICATION->SetPageProperty('title', 'Предлагаем купить удлинители для цветов в интернет-магазине «Баккара Декор»');
 			$APPLICATION->SetPageProperty('description', 'Интернет магазин аксессуаров «Баккара Декор» предлагает оптом удлинители для цветов в ассортименте.');
 			$APPLICATION->SetPageProperty('keywords', 'удлинитель для цветов');
@@ -87,7 +87,6 @@
 			$APPLICATION->SetTitle("Каталог товаров");
 			break;
 	}
-
 	if(isset($seo_text))
 	{
 		?>
@@ -171,7 +170,6 @@
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"PRODUCT_PROPERTIES" => array(
-			0 => "CML2_ARTICLE",
 		),
 		"USE_COMMON_SETTINGS_BASKET_POPUP" => "Y",
 		"TOP_ADD_TO_BASKET_ACTION" => "ADD",
@@ -248,7 +246,7 @@
 		"USE_ALSO_BUY" => "N",
 		"USE_STORE" => "N",
 		"PAGER_TEMPLATE" => ".default",
-		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_TOP_PAGER" => "Y",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"PAGER_TITLE" => "Товары",
 		"PAGER_SHOW_ALWAYS" => "N",

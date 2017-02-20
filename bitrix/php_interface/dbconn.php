@@ -1,6 +1,6 @@
 <?
 #define("BX_COMPOSITE_DEBUG", true);
-#define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log.txt");
+define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log.txt");
 define("DBPersistent", false);
 $DBType = "mysql";
 $DBHost = "localhost";
@@ -26,6 +26,3 @@ define("BX_FILE_PERMISSIONS", 0644);
 define("BX_DIR_PERMISSIONS", 0755);
 @umask(~BX_DIR_PERMISSIONS);
 define("BX_DISABLE_INDEX_PAGE", true);
-
-define("LOG_FILENAME", $_SERVER["DOCUMENT_ROOT"]."/log.txt");
-?>

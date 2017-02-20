@@ -1,4 +1,4 @@
-<script type="text/javascript">
+	<script type="text/javascript">
 		$(document).ready(function() {	 
 
 			$('input[name="REGISTER[EMAIL]"]').on('change',function(e){
@@ -134,33 +134,28 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
                 </div>
             </div>
             <div class="clr"></div>
-            <? if (!$arResult['CONFIRMED']): ?>
-                <div class="oferta-wrap">
-                    <img width="50" src="<?= SITE_TEMPLATE_PATH ?>/images/i35003.png"> <span
-                        style="color:red;">Обратите внимание!</span>
-                    подтверждая заказ, вы соглашаетесья с <a href="#oferta" class="oferta-href">офертой.</a>
+            <div class="oferta-wrap">
+                <img width="50" src="<?=SITE_TEMPLATE_PATH?>/images/i35003.png"> <span style="color:red;">Обратите внимание!</span> Регистрируясь на нашем сайте, Вы принимаете <a href="#oferta" class="oferta-href">оферту.</a>
 
-                    <!-- Ссылки на вызов модальных окон-->
+                <!-- Ссылки на вызов модальных окон-->
 
-                    <a class="overlay" id="oferta"></a>
-                    <div class="popup oferta-popup">
-                        <?= $arResult['OFERTA'] ?>
-                        <div style="text-align:center;" class="oferta-wrapper">
-                            <label class="label-of-wrap" style="display:inline-block;">
-                        <span class="oferta-cb-wrap">
-                            <input class="checkbox-oferta" type="checkbox">
-                            Принимаю оферту
-                        </span>
-                            </label>
-                            <a id="close_ofert" class="submit-ofert button confirm_ofert" href="#close"
-                               data="<?= $arResult['REQUIRED_OFERT'] ?>">Подтвердить</a>
-                        </div>
-
-                        <a class="close" title="Закрыть" href="#close"></a>
-                    </div>
-
+                <a class="overlay" id="oferta"></a>
+                <div class="popup oferta-popup">
+                    <?/*<a href="#close" title="Закрыть" class="close-1"></a>*/?>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:main.include",
+                        "",
+                        Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "AREA_FILE_RECURSIVE" => "Y",
+                            "PATH" => "/include/oferta.php"
+                        )
+                    );?>
+                    <a class="close"title="Закрыть" href="#close"></a>
                 </div>
-            <? endif; ?>
+            </div>
             <div class="button_holder">
                 <input type="submit"  name="register_submit_button" class="button" value="зарегистрироваться">
                 <p class="note">После регистрации Вы получите подтверждение на указанный e-mail,<br>подтвердив его, Вы можете продолжить оформление заказа, выбрав пункт «Войти»</p>
@@ -305,33 +300,28 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
                         </div>
                     </div>
                 </div>
-                <? if (!$arResult['CONFIRMED']): ?>
-                    <div class="oferta-wrap">
-                        <img width="50" src="<?= SITE_TEMPLATE_PATH ?>/images/i35003.png"> <span
-                            style="color:red;">Обратите внимание!</span>
-                        подтверждая заказ, вы соглашаетесья с <a href="#oferta" class="oferta-href">офертой.</a>
+                <div class="oferta-wrap">
+                    <img width="50" src="<?=SITE_TEMPLATE_PATH?>/images/i35003.png"> <span style="color:red;">Обратите внимание!</span> Регистрируясь на нашем сайте, Вы принимаете <a href="#oferta2" class="oferta-href">оферту.</a>
 
-                        <!-- Ссылки на вызов модальных окон-->
+                    <!-- Ссылки на вызов модальных окон-->
 
-                        <a class="overlay" id="oferta"></a>
-                        <div class="popup oferta-popup">
-                            <?= $arResult['OFERTA'] ?>
-                            <div style="text-align:center;" class="oferta-wrapper">
-                                <label class="label-of-wrap" style="display:inline-block;">
-                        <span class="oferta-cb-wrap">
-                            <input class="checkbox-oferta" type="checkbox">
-                            Принимаю оферту
-                        </span>
-                                </label>
-                                <a id="close_ofert" class="submit-ofert button confirm_ofert" href="#close"
-                                   data="<?= $arResult['REQUIRED_OFERT'] ?>">Подтвердить</a>
-                            </div>
-
-                            <a class="close" title="Закрыть" href="#close"></a>
-                        </div>
-
+                    <a class="overlay" id="oferta2"></a>
+                    <div class="popup oferta-popup">
+                        <?/*<a href="#close" title="Закрыть" class="close-1"></a>*/?>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "AREA_FILE_RECURSIVE" => "Y",
+                                "PATH" => "/include/oferta.php"
+                            )
+                        );?>
+                        <a class="close"title="Закрыть" href="#close"></a>
                     </div>
-                <? endif; ?>
+                </div>
                 <div class="button_holder">
                     <input type="submit" class="button"  name="register_submit_button" value="зарегистрироваться">
                     <p class="note">Для завершения регистрации юридического лица Вам необходимо <br>приложить отсканированные документы, необходимые для заключения договора. <br>После их подтверждения вы сможете совершать покупки по оптовым ценам.</p>
@@ -533,33 +523,28 @@ if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)
                         </div>
                     </div>
                 </div>
-            <? if (!$arResult['CONFIRMED']): ?>
                 <div class="oferta-wrap">
-                    <img width="50" src="<?= SITE_TEMPLATE_PATH ?>/images/i35003.png"> <span
-                        style="color:red;">Обратите внимание!</span>
-                    подтверждая заказ, вы соглашаетесья с <a href="#oferta" class="oferta-href">офертой.</a>
+                    <img width="50" src="<?=SITE_TEMPLATE_PATH?>/images/i35003.png"> <span style="color:red;">Обратите внимание!</span> Регистрируясь на нашем сайте, Вы принимаете <a href="#oferta3" class="oferta-href">оферту.</a>
 
                     <!-- Ссылки на вызов модальных окон-->
 
-                    <a class="overlay" id="oferta"></a>
+                <a class="overlay" id="oferta3"></a></a>
                     <div class="popup oferta-popup">
-                        <?= $arResult['OFERTA'] ?>
-                        <div style="text-align:center;" class="oferta-wrapper">
-                            <label class="label-of-wrap" style="display:inline-block;">
-                        <span class="oferta-cb-wrap">
-                            <input class="checkbox-oferta" type="checkbox">
-                            Принимаю оферту
-                        </span>
-                            </label>
-                            <a id="close_ofert" class="submit-ofert button confirm_ofert" href="#close"
-                               data="<?= $arResult['REQUIRED_OFERT'] ?>">Подтвердить</a>
-                        </div>
-
-                        <a class="close" title="Закрыть" href="#close"></a>
+                        <?/*<a href="#close" title="Закрыть" class="close-1"></a>*/?>
+                        <?$APPLICATION->IncludeComponent(
+                            "bitrix:main.include",
+                            "",
+                            Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "AREA_FILE_RECURSIVE" => "Y",
+                                "PATH" => "/include/oferta.php"
+                            )
+                        );?>
+                        <a class="close"title="Закрыть" href="#close"></a>
                     </div>
-
                 </div>
-            <? endif; ?>
                 <div class="button_holder">
                     <input type="submit" class="button"  name="register_submit_button" value="зарегистрироваться">
                     <p class="note">Для завершения регистрации юридического лица Вам необходимо <br>приложить отсканированные документы, необходимые для заключения договора. <br>После их подтверждения вы сможете совершать покупки по оптовым ценам.</p>

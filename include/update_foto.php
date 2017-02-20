@@ -10,10 +10,7 @@ CModule::IncludeModule('iblock');
     $arSec[strtolower($ar_result['NAME'])] = $ar_result['ID'];
   }
 
-  echo '<pre>';
-  var_dump(  $arSec);
-  echo '</pre>';
-  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
 $arFilter = Array("IBLOCK_ID"=>1, "ACTIVE_DATE"=>"Y", "ACTIVE"=>"Y");
 $res = CIBlockElement::GetList(Array(), $arFilter, false, false);
 while($ob = $res->GetNextElement())
@@ -47,15 +44,8 @@ while($ob = $res->GetNextElement())
 //	CIBlockElement::SetElementSection($arFields['ID'], $secID, false, 1);
 	$el->RecalcSections($arFields['ID']);
  }
-
-	var_dump($arFields['ID'], $secID, $sec2,  $sec);
-	echo '<br /><hr />';
-
-
- 
-
-
-
+	/*AddMessage2Log($arFields['ID']);
+	AddMessage2Log($secID);
+	AddMessage2Log($sec2);
+	AddMessage2Log($sec);*/
 }
-
-?>
