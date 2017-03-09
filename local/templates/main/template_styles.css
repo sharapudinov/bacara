@@ -15,11 +15,11 @@
 }
 
 #foto24 {
-    background-image: url("images/24_1m.jpg");
+    background-image: url("images/24_5.png");
     z-index:999999999999999999999999;
     width:395px; 
     height:159px; 
-    position:absolute;
+    position:fixed;
     right:0; 
     top:122px;
     background-repeat: no-repeat;

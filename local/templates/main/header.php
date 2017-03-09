@@ -5,6 +5,9 @@ IncludeTemplateLangFile(__FILE__);
   <head>
 	<title><?$APPLICATION->ShowTitle()?></title>
    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name='wmail-verification' content='17eeb01cf42f1c0e' />
+    
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet" media="screen">
 	<link href="/css/jquery.fancybox.css" rel="stylesheet">
@@ -41,13 +44,13 @@ IncludeTemplateLangFile(__FILE__);
 	<!--[if lt IE 9]>
 	<script src="/js/IE9.js"></script>
 	<![endif]-->
-
   </head>
  <body>
 	<?$APPLICATION->ShowPanel()?>
     <?//if(!$USER->IsAdmin() && $APPLICATION->GetCurUri() != '/engineering works.php'):?>
         <?//LocalRedirect('/engineering works.php');?>
     <?//endif;?>
+	<!--<div id="foto24" style=""></div>-->
     <div class="all_ok all_ok2">Ваше обращение успешно отправлено. В ближайшее время с Вами свяжется менеджер</div>
  	<div class="container" style="position:relative">
         <div class="price_category-request_popup">
