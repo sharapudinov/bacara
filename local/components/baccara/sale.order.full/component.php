@@ -99,6 +99,9 @@ $arResult["SKIP_FORTH_STEP"] = (($arResult["POST"]["SKIP_FORTH_STEP"] == "Y") ? 
 
 if(strlen($arResult["POST"]["PERSON_TYPE"])>0)
 	$arResult["PERSON_TYPE"] = IntVal($arResult["POST"]["PERSON_TYPE"]);
+//тип плательщика  - самовывоз
+$arResult["PERSON_TYPE"]=3;
+//костыль
 if(strlen($arResult["POST"]["PROFILE_ID"])>0)
 {
 	$arResult["PROFILE_ID"] = IntVal($arResult["POST"]["PROFILE_ID"]);
@@ -113,6 +116,9 @@ if(strlen($arResult["POST"]["PROFILE_ID"])>0)
 	if(!$dbUserProfiles->GetNext())
 		$arResult["PROFILE_ID"] = 0;
 }
+//доставка  - самовывоз
+$arResult["DELIVERY_ID"]=2;
+//костыль
 if(strlen($arResult["POST"]["DELIVERY_ID"])>0)
 {
 	if (strpos($arResult["POST"]["DELIVERY_ID"], ":") === false)
