@@ -56,7 +56,7 @@ else
 		
 			<? echo ShowError($arResult["ERROR_MESSAGE"]); 
 			if ($arResult["CurrentStep"] == 1)
-				include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step4   .php");
+				include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step4       .php");
 			elseif ($arResult["CurrentStep"] == 2)
 				include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/step2.php");
 			elseif ($arResult["CurrentStep"] == 3)
