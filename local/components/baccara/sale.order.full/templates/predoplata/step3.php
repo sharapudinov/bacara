@@ -20,6 +20,7 @@
 				<td colspan="2"><?echo GetMessage("STOF_SELECT_DELIVERY")?><br /><br /></td>
 			</tr>
 			<?
+            $arResult["DELIVERY"]= array(2);
 				foreach ($arResult["DELIVERY"] as $delivery_id => $arDelivery)
 				{
 					if ($delivery_id !== 0 && intval($delivery_id) <= 0):
