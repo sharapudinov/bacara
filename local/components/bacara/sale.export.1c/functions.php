@@ -1,6 +1,4 @@
 <?
-//require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/sale/mysql/export.php");
-
 class CSaleExport2XML
 {
 	/* function GetBasketItemFields($arBasketItem)
@@ -808,8 +806,8 @@ class CSaleExport2XML
         <<?= 'ЮридическийАдрес' ?>><?= $userInfo['UF_ADDRESS_UR'] ?></<?= 'ЮридическийАдрес' ?>>
         <<?= 'ФактическийАдрес' ?>><?= $userInfo['UF_ADDRESS_FACT'] ?></<?= 'ФактическийАдрес' ?>>
         <<?= 'ПочтовыйАдрес' ?>><?= $userInfo['UF_ADDRESS_POST'] ?></<?= 'ПочтовыйАдрес' ?>>
-        <<?= 'СерияПаспорта' ?>><?= $arProps['passport_ser'] ?></<?= 'СерияПаспорта' ?>>
-        <<?= 'НомерПаспорта' ?>><?= $arProps['9'] ?></<?= 'НомерПаспорта' ?>>
+        <<?= 'СерияПаспорта' ?>><?= $arProps['passport_ser'] ? $arProps['passport_ser']:$userInfo['UF_PASSPORT_SERIAL']?></<?= 'СерияПаспорта' ?>>
+        <<?= 'НомерПаспорта' ?>><?= $arProps['9']?$arProps['9']:$userInfo['UF_PASSPORT_NUMBER'] ?></<?= 'НомерПаспорта' ?>>
         <<?= 'КогдаВыданПаспорт' ?>><?= $userInfo['UF_PASSPORT_GIVE'] ?></<?= 'КогдаВыданПаспорт' ?>>
         <<?= 'КемВыданПаспорт' ?>><?= $userInfo['UF_PASSPORT_FROM'] ?></<?= 'КемВыданПаспорт' ?>>
         <<?= 'КодПодразделенияПаспорта' ?>><?= $userInfo['UF_PASSPORT_FCODE'] ?></<?= 'КодПодразделенияПаспорта' ?>>
