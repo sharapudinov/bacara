@@ -1,5 +1,5 @@
 <?
-require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/sale/mysql/export.php");
+//require_once($_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/sale/mysql/export.php");
 
 class CSaleExport2XML
 {
