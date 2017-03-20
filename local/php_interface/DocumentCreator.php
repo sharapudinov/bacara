@@ -1,6 +1,6 @@
 <?
 
-class DocumetntCreater
+class DocumetntCreator
 {
     public static function createProxy(
         Bitrix\Sale\Order $order,
@@ -10,17 +10,33 @@ class DocumetntCreater
         )
     )
     {
+        $properties=$order->getPropertyCollection()->getArray()['properties'];
+        $properties=MyClass::AdjustOrderPropertyArray($properties);
+
 // Include the main TCPDF library (search for installation path).
 
         $client = array(
-            'NAME' => '',
-            'PASSPORT_NUM' => '',
-            'INN' => ''
+            'NAME' => $properties['FIO']['VALUE'][0],
+            'PASSPORT_NUM' => $properties['passport_num']['VALUE'][0],
+            'PASSPORT_SERIAL' => $properties['passport_serial']['VALUE'][0]
         );
+
+        \Bitrix\Main\Loader::IncludeModule("iblock");
+        $dbRes=CIBlockElement::GetList(
+            array("ID" => "ASC"),
+            array("IBLOCK_ID" => 11,"NAME"=>$properties['tc']['OPTIONS'][$properties['tc']['VALUE'][0]]),
+            false,
+            false,
+            array("ID", "NAME","PROPERTY_INN","PROPERTY_OGRN","PROPERTY_JURADDR")
+    );
+        $arTc=$dbRes->GetNext();
+
+/*        AddMessage2Log($arTc);*/
+
         $shipment = array(
-            'INN' => '',
-            'OGRN' => '',
-            'JURADDR' => ''
+            'INN' => $arTc['PROPERTY_INN_VALUE'],
+            'OGRN' => $arTc['PROPERTY_OGRN_VALUE'],
+            'JURADDR' => $arTc['PROPERTY_JURADDR_VALUE']
         );
         $orderId = $order->getId();
         require_once($_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/TCPDF-master/tcpdf.php');
@@ -33,9 +49,9 @@ class DocumetntCreater
 
 // set document information
         $pdf->SetCreator(PDF_CREATOR);
-        $pdf->SetAuthor('Nicola Asuni');
-        $pdf->SetTitle('TCPDF Example 001');
-        $pdf->SetSubject('TCPDF Tutorial');
+        $pdf->SetAuthor($client['NAME']);
+        $pdf->SetTitle('Доверенность на получение заказа');
+        $pdf->SetSubject('ИП Серов');
         $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
@@ -93,10 +109,13 @@ class DocumetntCreater
     <td>Я, </td><td>{$client['NAME']}</td>
 </tr>
 <tr>
-    <td> Паспорт</td><td>{$client['PASSPORT_NUM']}</td>
+    <td> Паспорт</td><td></td>
+    </tr>
+   <tr>
+        <td> Серия </td><td>{$client['PASSPORT_SERIAL']}</td>
 </tr>
 <tr>
-    <td> ИНН</td><td>{$client['INN']}</td>
+    <td> Номер </td><td>{$client['PASSPORT_NUM']}</td>
 </tr>
 <tr><td></td><td></td></tr>
 <tr>

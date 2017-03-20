@@ -97,7 +97,7 @@ class Cart
 {
     function addBasketInfoToEmail($id, &$eventName, &$arFields)
     {
-        AddMessage2Log($arFields);
+/*        AddMessage2Log($arFields);*/
 
         /*if ($eventName=='SALE_NEW_ORDER' && strlen($arFields['ORDER_LIST']<=0)) {
             global $APPLICATION;
@@ -232,6 +232,17 @@ $eventManager->addEventHandler("sale", "OnSaleOrderSaved", ["MyClass", "OnSaleOr
 
 class MyClass
 {
+    public static function AdjustOrderPropertyArray(array $arProperties)
+    {
+        return array_reduce($arProperties,
+            function ($carry,$item) {
+                $carry[$item['CODE']]=$item;
+                return $carry;
+            },[]);
+    }
+
+
+
     function OnBeforeUserAddHandler(&$arFields)
     {
         $arFields["UF_CONFIRMED_OFERTS"][] = requered_ofert_for_user();
@@ -242,9 +253,9 @@ class MyClass
         require_once ('DocumentCreator.php');
         $result = new Bitrix\Main\Entity\EventResult;
          $order = $event->getParameter("ENTITY");
-        AddMessage2Log($order->getField('DELIVERY_ID'));
+
         if($order->getField('DELIVERY_ID')==1){
-            DocumetntCreater::createProxy($order);
+            DocumetntCreator::createProxy($order);
         };
         /*$pdfObject->Text(20,20,$order->getPrice());
         $pdfObject->Output($_SERVER['DOCUMENT_ROOT'].'/proxy.pdf');*/
